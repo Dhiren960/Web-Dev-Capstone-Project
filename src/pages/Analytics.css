@@ -1,0 +1,70 @@
+.month-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.month-tab {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  min-width: 100px;
+}
+
+.month-tab:hover {
+  background: var(--bg3);
+}
+
+.month-tab.active {
+  background: var(--accent-dim2);
+  border-color: var(--accent);
+}
+
+.month-tab-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.month-tab.active .month-tab-label {
+  color: var(--accent);
+}
+
+.month-tab-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cat-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.cat-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+}
